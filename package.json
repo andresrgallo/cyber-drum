@@ -5,8 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"webpack": "webpack",
-		"start": "webpack-dev-server --open"
+		"webpack": "babel-node ./node_modules/webpack/bin/webpack",
+		"start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
 	},
 	"keywords": [
 		"react",
@@ -17,9 +17,23 @@
 	"author": "Andres R Ballo",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/core": "7.3.4",
+		"@babel/node": "7.2.2",
+		"@babel/plugin-proposal-class-properties": "7.3.4",
+		"@babel/preset-env": "7.3.4",
+		"@babel/preset-react": "7.0.0",
+		"babel-loader": "8.0.5",
+		"css-loader": "2.1.1",
 		"html-webpack-plugin": "3.2.0",
+		"node-sass": "4.11.0",
+		"sass-loader": "7.1.0",
+		"style-loader": "0.23.1",
 		"webpack": "4.29.6",
 		"webpack-cli": "3.2.3",
 		"webpack-dev-server": "3.2.1"
+	},
+	"dependencies": {
+		"react": "16.8.4",
+		"react-dom": "16.8.4"
 	}
 }
