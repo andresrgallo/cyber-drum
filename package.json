@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"webpack": "webpack",
+		"start": "webpack-dev-server --open"
 	},
 	"keywords": [
 		"react",
@@ -15,6 +17,7 @@
 	"author": "Andres R Ballo",
 	"license": "ISC",
 	"devDependencies": {
+		"html-webpack-plugin": "3.2.0",
 		"webpack": "4.29.6",
 		"webpack-cli": "3.2.3",
 		"webpack-dev-server": "3.2.1"
