@@ -13,5 +13,10 @@
 		"scss"
 	],
 	"author": "Andres R Ballo",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"webpack": "4.29.6",
+		"webpack-cli": "3.2.3",
+		"webpack-dev-server": "3.2.1"
+	}
 }
