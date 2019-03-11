@@ -1,6 +1,138 @@
+$customFont: 25px;
+$customHeight: 35px;
+$controlsMargin: 50px;
+$control: blue;
+$backgroundKeys: grey;
+
 body {
+	* {
+		box-sizing: border-box;
+	}
+
+	background-color: #f5ecec;
 	div#root {
-		background-color: #222;
-		color: #8ee4af;
+		main {
+			h1 {
+				text-align: center;
+			}
+			div.main-container {
+				display: flex;
+				div#drum-wrapper {
+					width: 50%;
+				}
+				div#controls-wrapper {
+					width: 50%;
+					padding: 80px 90px;
+					#power-wrapper {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						#power-title {
+							font-size: $customFont;
+							font-weight: bold;
+						}
+						#power-box {
+							border: 2px solid black;
+							width: 100px;
+							height: $customHeight;
+							display: flex;
+							.on-power {
+								background: black;
+							}
+							.off-power {
+								background: $control;
+							}
+							#power-on {
+								width: 50px;
+								height: $customHeight - 4px;
+							}
+							#power-off {
+								height: $customHeight - 4px;
+								width: 50%;
+							}
+						}
+					}
+					#sound-wrapper {
+						text-align: center;
+						margin: $controlsMargin;
+						#sound-box {
+							display: flex;
+							margin: auto;
+							width: 300px;
+							background: grey;
+							font-size: $customFont;
+							height: 60px;
+							text-align: center;
+							align-items: center;
+							justify-content: center;
+						}
+					}
+
+					#volume-wrapper {
+						display: flex;
+						justify-content: center;
+						margin: $controlsMargin;
+						#volume-bar {
+							width: 350px;
+							height: 5px;
+							background: $backgroundKeys;
+						}
+					}
+					#bank-wrapper {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						#bank-title {
+							font-size: $customFont;
+							font-weight: bold;
+						}
+						#bank-box {
+							border: 2px solid black;
+							width: 100px;
+							background: $control;
+							height: $customHeight;
+							display: flex;
+							.on-bank {
+								background: black;
+							}
+							.off-bank {
+								background: $control;
+							}
+							#bank-on {
+								width: 50px;
+								height: $customHeight - 4px;
+							}
+							#bank-off {
+								height: $customHeight - 4px;
+								width: 50%;
+							}
+						}
+					}
+				}
+
+				div.drum-container {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					width: 100%;
+					padding: 30px 90px;
+					#key {
+						font-size: 30px;
+						margin: 20px;
+						line-height: 120px;
+						border: 1px solid black;
+						border-radius: 5px;
+						width: 120px;
+						text-align: center;
+						background: $backgroundKeys;
+						box-shadow: black 3px 3px 5px;
+						&:hover {
+							background: orange;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
 	}
 }
