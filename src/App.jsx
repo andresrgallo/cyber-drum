@@ -40,14 +40,20 @@ class App extends Component {
 	}
 
 	handleKey(keyIndex) {
-		console.log('hhhh', keyIndex);
 		this.setState({ sound: this.state.keys[keyIndex].sound });
 	}
 
 	render() {
 		const { keys, power, sound, bank } = this.state;
 		const keysList = keys.map((k, index) => (
-			<Key key={k.name} index={index} keyObj={k} clickKey={this.handleKey} />
+			<Key
+				classTag={'key_' + k.name}
+				key={k.name}
+				index={index}
+				keyObj={k}
+				clickKey={this.handleKey}
+				power={power}
+			/>
 		));
 		return (
 			<main>
@@ -58,9 +64,9 @@ class App extends Component {
 					</div>
 					<div id="controls-wrapper">
 						<Power power={power} clickPower={this.handlePower} />
-						<Sound sound={sound} />
+						<Sound sound={sound} power={power} />
 						<Volume />
-						<Bank bank={bank} clickBank={this.handleBank} />
+						<Bank bank={bank} clickBank={this.handleBank} power={power} />
 					</div>
 				</div>
 			</main>

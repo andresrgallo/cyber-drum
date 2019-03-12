@@ -116,7 +116,7 @@ body {
 					flex-wrap: wrap;
 					width: 100%;
 					padding: 30px 90px;
-					#key {
+					.key {
 						font-size: 30px;
 						margin: 20px;
 						line-height: 120px;
@@ -127,8 +127,23 @@ body {
 						background: $backgroundKeys;
 						box-shadow: black 3px 3px 5px;
 						&:hover {
-							background: orange;
 							cursor: pointer;
+						}
+					}
+					.key-power-on {
+						&:hover {
+							background: orange;
+						}
+						&:active {
+							transform: scale(0.9);
+							transition: transform 0.9s;
+						}
+					}
+					.key-power-off {
+						&:active {
+							background: gray;
+							transform: scale(0.9);
+							transition: transform 0.8s;
 						}
 					}
 				}
